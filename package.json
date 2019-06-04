@@ -2,6 +2,10 @@
   "name": "react-images",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "5.6.0",
+    "node": "8.11.3"
+  },
   "dependencies": {
     "axios": "^0.18.1",
     "react": "^16.8.6",
