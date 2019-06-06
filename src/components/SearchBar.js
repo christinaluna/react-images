@@ -1,4 +1,24 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Form = styled.form`
+    margin-bottom: 2em;
+`
+
+const Heading = styled.h1`
+    color: palevioletred;
+`
+
+const Input = styled.input`
+    outline: 2px solid #ea9f9f;
+    padding: 1em;
+    margin: 0.5em 0;
+    color: ${props => props.inputColor || "palevioletred"};
+    background: papayawhip;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+`
 
 class SearchBar extends React.Component {
     state = { term: '' };
@@ -10,14 +30,10 @@ class SearchBar extends React.Component {
 
     render() {
         return  (
-            <div className="ui segment">
-                <form className="ui form" onSubmit={this.onFormSubmit}>
-                    <div className="field">
-                    <label>Image Search</label>
-                        <input type="text" value={this.state.term} onChange={e => this.setState({ term : e.target.value })} />
-                    </div>
-                </form>
-            </div>
+            <Form onSubmit={this.onFormSubmit}>
+                <Heading>Image search</Heading>
+                    <Input type="text" placeholder="Search Unsplash images" value={this.state.term} onChange={e => this.setState({ term : e.target.value })} />
+            </Form>
         )
     }
 }
