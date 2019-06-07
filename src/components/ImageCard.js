@@ -8,9 +8,9 @@ class ImageCard extends React.Component {
             <div className="item">
                 <div className="author-overlay">
                     <div className="author-link">
-                        <a href={user.links.html} target="_blank" className="ui mini horizontal divided list">
+                        <a href={user.links.html} target="_blank" rel="noopener noreferrer" className="ui mini horizontal divided list">
                             <div className="item">
-                                <img className="ui avatar image" src={user.profile_image.medium} />
+                                <img className="ui avatar image" alt={user.name} src={user.profile_image.medium} />
                                 <div className="content"><p>{user.name}</p></div>
                             </div>
                         </a>

@@ -6,15 +6,14 @@ const Form = styled.form`
 `
 
 const Heading = styled.h1`
-    color: palevioletred;
+    color: white;
 `
 
 const Input = styled.input`
-    outline: 2px solid #ea9f9f;
     padding: 1em;
     margin: 0.5em 0;
-    color: ${props => props.inputColor || "palevioletred"};
-    background: papayawhip;
+    color: ${props => props.inputColor || "black"};
+    background: white;
     border: none;
     border-radius: 3px;
     width: 100%;

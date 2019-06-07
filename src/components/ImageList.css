@@ -1,5 +1,11 @@
 .image-list {
-    columns: 4;
+    columns: 3;
+}
+
+@media only screen and (max-width : 768px) {
+    .image-list {
+        columns: 1;
+    }
 }
 
 .item {
@@ -7,7 +13,6 @@
     display: inline-block;
     width: 100%;
     text-align: center;
-    font-family: system-ui;
     font-weight: 900;
     font-size: 2rem;
     position: relative;
